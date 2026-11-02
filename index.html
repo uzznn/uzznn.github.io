@@ -135,7 +135,98 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:22px}
 </ul>
 </section>
 
+<section class="card" id="survey-section">
+<h2>📊 콘텐츠 선호도 조사</h2>
+<p style="color:var(--sub);font-size:14px;margin-bottom:14px">제 페이지에서 어떤 콘텐츠가 가장 좋았나요? 하나만 골라주세요 😊</p>
+<div id="survey-opts" style="display:grid;gap:8px">
+  <button class="vote-btn" data-topic="자기소개">👤 자기소개</button>
+  <button class="vote-btn" data-topic="경영정보학부">🎓 경영정보학부 소개</button>
+  <button class="vote-btn" data-topic="아웃백알바">🍖 아웃백 알바 이야기</button>
+  <button class="vote-btn" data-topic="앵무새">🦜 앵무새 이야기</button>
+  <button class="vote-btn" data-topic="게임">🎮 Galaga·Pac-Man 게임</button>
+</div>
+<div id="survey-result" style="display:none;margin-top:16px"></div>
+</section>
+
 <footer>🦜 방문해 주셔서 감사합니다 · © 차유정</footer>
 </main>
+
+<style>
+.vote-btn{
+  width:100%;padding:11px 14px;border-radius:12px;border:1.5px solid var(--line);
+  background:var(--chip);color:var(--text);font-size:15px;font-weight:600;
+  cursor:pointer;text-align:left;transition:background .15s,border-color .15s;font-family:inherit
+}
+.vote-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.bar-wrap{margin:6px 0}
+.bar-label{display:flex;justify-content:space-between;font-size:14px;margin-bottom:3px}
+.bar-track{background:var(--line);border-radius:999px;height:10px;overflow:hidden}
+.bar-fill{height:100%;background:var(--accent);border-radius:999px;transition:width .5s}
+#survey-msg{margin-top:10px;font-size:14px;color:var(--accent);font-weight:700}
+</style>
+
+<script>
+(async () => {
+  const SUPA_URL = 'https://ixubwvjarrwuvyndzupg.supabase.co';
+  const SUPA_KEY = 'sb_publishable_Njo1vuU_aIdFpKS4hi1h7w_-KCq_ZOa';
+  const headers  = { 'Content-Type': 'application/json', 'apikey': SUPA_KEY, 'Authorization': 'Bearer ' + SUPA_KEY };
+
+  const TOPICS = ['자기소개', '경영정보학부', '아웃백알바', '앵무새', '게임'];
+  const LABELS = { '자기소개':'👤 자기소개', '경영정보학부':'🎓 경영정보학부 소개', '아웃백알바':'🍖 아웃백 알바 이야기', '앵무새':'🦜 앵무새 이야기', '게임':'🎮 Galaga·Pac-Man 게임' };
+
+  /* 투표 결과 조회 */
+  async function fetchResult() {
+    const res  = await fetch(`${SUPA_URL}/rest/v1/survey?select=topic`, { headers });
+    const rows = await res.json();
+    const counts = Object.fromEntries(TOPICS.map(t => [t, 0]));
+    rows.forEach(r => { if (counts[r.topic] !== undefined) counts[r.topic]++; });
+    return counts;
+  }
+
+  /* 결과 렌더링 */
+  async function showResult(voted) {
+    const counts = await fetchResult();
+    const total  = Object.values(counts).reduce((a, b) => a + b, 0) || 1;
+    const el     = document.getElementById('survey-result');
+    el.style.display = 'block';
+    el.innerHTML = `
+      <p style="font-weight:700;margin:0 0 10px">📈 현재 결과 (총 ${total}표)</p>
+      ${TOPICS.map(t => `
+        <div class="bar-wrap">
+          <div class="bar-label"><span>${LABELS[t]}</span><span>${counts[t]}표 (${Math.round(counts[t]/total*100)}%)</span></div>
+          <div class="bar-track"><div class="bar-fill" style="width:${Math.round(counts[t]/total*100)}%"></div></div>
+        </div>`).join('')}
+      ${voted ? '<p id="survey-msg">✅ 투표해 주셔서 감사해요!</p>' : ''}
+      <button id="retry-btn" style="margin-top:10px;background:none;border:none;color:var(--sub);font-size:13px;cursor:pointer;text-decoration:underline">다시 투표하기</button>`;
+    document.getElementById('retry-btn').onclick = () => {
+      localStorage.removeItem('survey_voted');
+      document.getElementById('survey-opts').style.display = 'grid';
+      el.style.display = 'none';
+    };
+  }
+
+  /* 이미 투표했으면 결과 바로 보여주기 */
+  if (localStorage.getItem('survey_voted')) {
+    document.getElementById('survey-opts').style.display = 'none';
+    showResult(false);
+  }
+
+  /* 투표 버튼 */
+  document.querySelectorAll('.vote-btn').forEach(btn => {
+    btn.addEventListener('click', async () => {
+      const topic = btn.dataset.topic;
+      document.querySelectorAll('.vote-btn').forEach(b => b.disabled = true);
+      await fetch(`${SUPA_URL}/rest/v1/survey`, {
+        method: 'POST',
+        headers: { ...headers, 'Prefer': 'return=minimal' },
+        body: JSON.stringify({ topic })
+      });
+      localStorage.setItem('survey_voted', '1');
+      document.getElementById('survey-opts').style.display = 'none';
+      showResult(true);
+    });
+  });
+})();
+</script>
 </body>
 </html>
