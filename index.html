@@ -148,6 +148,23 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:22px}
 <div id="survey-result" style="display:none;margin-top:16px"></div>
 </section>
 
+<section class="card" id="guestbook-section">
+<h2>💌 방명록</h2>
+<p style="color:var(--sub);font-size:14px;margin-bottom:14px">방문 기념으로 한 마디 남겨주세요 😊</p>
+<div style="display:grid;gap:8px;margin-bottom:14px">
+  <input id="gb-name" type="text" placeholder="이름 (닉네임 가능)" maxlength="20"
+    style="padding:10px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--text);font-size:15px;font-family:inherit;outline:none">
+  <textarea id="gb-msg" placeholder="메시지를 입력하세요" maxlength="200" rows="3"
+    style="padding:10px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--text);font-size:15px;font-family:inherit;outline:none;resize:none"></textarea>
+  <button id="gb-submit"
+    style="padding:11px;border-radius:10px;border:none;background:var(--accent);color:#fff;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit">
+    남기기 ✉️
+  </button>
+  <p id="gb-status" style="font-size:13px;color:var(--accent);margin:0;min-height:18px"></p>
+</div>
+<div id="gb-list" style="display:grid;gap:10px"></div>
+</section>
+
 <footer>🦜 방문해 주셔서 감사합니다 · © 차유정</footer>
 </main>
 
@@ -226,6 +243,70 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:22px}
       showResult(true);
     });
   });
+})();
+</script>
+<script>
+(async () => {
+  const SUPA_URL = 'https://ixubwvjarrwuvyndzupg.supabase.co';
+  const SUPA_KEY = 'sb_publishable_Njo1vuU_aIdFpKS4hi1h7w_-KCq_ZOa';
+  const HDR = {
+    'Content-Type': 'application/json',
+    'apikey': SUPA_KEY,
+    'Authorization': 'Bearer ' + SUPA_KEY
+  };
+
+  /* 목록 불러오기 */
+  async function loadMessages() {
+    const res  = await fetch(`${SUPA_URL}/rest/v1/guestbook?select=*&order=created_at.desc&limit=20`, { headers: HDR });
+    const rows = await res.json();
+    const list = document.getElementById('gb-list');
+    if (!Array.isArray(rows) || rows.length === 0) {
+      list.innerHTML = '<p style="color:var(--sub);font-size:14px;text-align:center">아직 방명록이 없어요. 첫 번째로 남겨보세요!</p>';
+      return;
+    }
+    list.innerHTML = rows.map(r => {
+      const date = new Date(r.created_at).toLocaleDateString('ko-KR', { month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit' });
+      return `
+        <div style="background:var(--chip);border-radius:12px;padding:12px 14px">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+            <span style="font-weight:700;color:var(--accent)">${r.name}</span>
+            <span style="font-size:12px;color:var(--sub)">${date}</span>
+          </div>
+          <p style="margin:0;font-size:14px">${r.message.replace(/</g,'&lt;')}</p>
+        </div>`;
+    }).join('');
+  }
+
+  /* 제출 */
+  document.getElementById('gb-submit').addEventListener('click', async () => {
+    const name = document.getElementById('gb-name').value.trim();
+    const msg  = document.getElementById('gb-msg').value.trim();
+    const status = document.getElementById('gb-status');
+    if (!name) { status.textContent = '⚠️ 이름을 입력해주세요'; return; }
+    if (!msg)  { status.textContent = '⚠️ 메시지를 입력해주세요'; return; }
+
+    document.getElementById('gb-submit').disabled = true;
+    status.textContent = '저장 중...';
+
+    const res = await fetch(`${SUPA_URL}/rest/v1/guestbook`, {
+      method: 'POST',
+      headers: { ...HDR, 'Prefer': 'return=minimal' },
+      body: JSON.stringify({ name, message: msg })
+    });
+
+    if (res.ok) {
+      document.getElementById('gb-name').value = '';
+      document.getElementById('gb-msg').value  = '';
+      status.textContent = '✅ 방명록이 등록됐어요!';
+      await loadMessages();
+      setTimeout(() => { status.textContent = ''; }, 3000);
+    } else {
+      status.textContent = '❌ 저장에 실패했어요. 다시 시도해주세요.';
+    }
+    document.getElementById('gb-submit').disabled = false;
+  });
+
+  loadMessages();
 })();
 </script>
 </body>
