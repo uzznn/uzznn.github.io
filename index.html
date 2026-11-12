@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>차유정 | 자기소개</title>
-<meta name="description" content="국민대학교 경영정보학부 21살 차유정의 자기소개 페이지입니다. 아웃백 알바생이자 앵무새 두 마리의 집사로 바쁘고 알차게 지내고 있어요.">
-<meta name="keywords" content="차유정, 국민대학교, 경영정보학부, 자기소개, 앵무새, 대학생">
+<meta name="description" content="국민대학교 경영정보학부 21살 차유정의 자기소개 페이지입니다. 아웃백 알바생이자 앵무새 바다·홍시의 집사로 바쁘고 알차게 지내고 있어요.">
+<meta name="keywords" content="차유정, 국민대학교, 경영정보학부, 자기소개, 앵무새, 바다, 홍시, 대학생">
 <link rel="canonical" href="https://uzznn.github.io/">
 <meta property="og:type" content="profile">
 <meta property="og:title" content="차유정 | 자기소개">
@@ -14,137 +14,164 @@
 <meta property="og:locale" content="ko_KR">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="차유정 | 자기소개">
-<meta name="twitter:description" content="국민대학교 경영정보학부 21살 차유정의 자기소개 페이지입니다.">
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "차유정",
-  "url": "https://uzznn.github.io",
-  "description": "국민대학교 경영정보학부에 재학 중인 21살 대학생. 아웃백 아르바이트와 앵무새 두 마리(바다·홍시)와 함께 생활 중.",
-  "alumniOf": {"@type":"CollegeOrUniversity","name":"국민대학교","department":"경영정보학부"},
-  "jobTitle": "대학생",
-  "knowsAbout": ["경영정보학", "데이터 분석", "정보 시스템", "앵무새"]
-}
+{"@context":"https://schema.org","@type":"Person","name":"차유정","url":"https://uzznn.github.io","description":"국민대학교 경영정보학부 21살 대학생. 앵무새 바다·홍시의 집사.","alumniOf":{"@type":"CollegeOrUniversity","name":"국민대학교","department":"경영정보학부"}}
 </script>
 <style>
 :root{
-  --bg:#f4f9f4;--card:#fff;--text:#24332a;--sub:#5f7366;
-  --accent:#2f9e5b;--chip:#e3f3e8;--line:#e1ece4;
-  --accent2:#1a7a42;--grad:linear-gradient(135deg,#2f9e5b,#56c97e);
+  --bg:#fff0f5;--card:#fff;--text:#3a1a2e;--sub:#a0607a;
+  --accent:#e84393;--accent2:#ff6eb4;--chip:#ffe4f0;--line:#f9c8dc;
+  --grad:linear-gradient(135deg,#e84393,#ff6eb4,#ffaad4);
+  --grad2:linear-gradient(135deg,#ff6eb4,#ffb3d4);
 }
 @media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
-  --bg:#111a14;--card:#1a2620;--text:#e8f3ec;--sub:#8fa89a;
-  --accent:#5fd18b;--chip:#213028;--line:#2a3d32;--accent2:#7de8a8;
+  --bg:#1e0a14;--card:#2a1020;--text:#ffe4f0;--sub:#c47090;
+  --accent:#ff6eb4;--accent2:#ffaad4;--chip:#3a1428;--line:#5a2040;
 }}
-:root[data-theme="dark"]{
-  --bg:#111a14;--card:#1a2620;--text:#e8f3ec;--sub:#8fa89a;
-  --accent:#5fd18b;--chip:#213028;--line:#2a3d32;--accent2:#7de8a8;
-}
 *{box-sizing:border-box}
 html,body{margin:0;background:var(--bg);color:var(--text);
   font-family:"Pretendard","Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.7}
 body{display:flex;justify-content:center;padding:24px 16px 60px}
-main{width:100%;max-width:520px}
+main{width:100%;max-width:540px}
 
 /* ── 히어로 ── */
-.hero{text-align:center;padding:32px 8px 16px;position:relative}
-.hero-bg{position:absolute;inset:0;overflow:hidden;border-radius:20px;z-index:0;pointer-events:none}
-.hero-bg span{position:absolute;border-radius:50%;opacity:.18;animation:drift 8s ease-in-out infinite}
-.hero-bg span:nth-child(1){width:160px;height:160px;background:var(--accent);top:-30px;left:-40px;animation-delay:0s}
-.hero-bg span:nth-child(2){width:100px;height:100px;background:#56c97e;bottom:-20px;right:-20px;animation-delay:-3s}
-.hero-bg span:nth-child(3){width:70px;height:70px;background:#a8e6c0;top:40%;left:80%;animation-delay:-5s}
-@keyframes drift{0%,100%{transform:translate(0,0)}50%{transform:translate(12px,-14px)}}
+.hero{text-align:center;padding:36px 8px 20px;position:relative;overflow:hidden;border-radius:24px;
+  background:linear-gradient(160deg,#fff0f5,#ffe4f0);margin-bottom:4px;
+  box-shadow:0 4px 24px rgba(232,67,147,.12)}
+.hero-bubble{position:absolute;border-radius:50%;pointer-events:none}
+.hero-bubble:nth-child(1){width:200px;height:200px;background:radial-gradient(circle,rgba(232,67,147,.18),transparent);top:-60px;left:-60px;animation:drift 7s ease-in-out infinite}
+.hero-bubble:nth-child(2){width:140px;height:140px;background:radial-gradient(circle,rgba(255,110,180,.22),transparent);bottom:-40px;right:-30px;animation:drift 9s ease-in-out infinite;animation-delay:-4s}
+.hero-bubble:nth-child(3){width:80px;height:80px;background:radial-gradient(circle,rgba(255,170,212,.3),transparent);top:30%;right:10%;animation:drift 6s ease-in-out infinite;animation-delay:-2s}
+@keyframes drift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(10px,-14px) scale(1.05)}}
 .hero>*{position:relative;z-index:1}
-.emoji-wrap{position:relative;display:inline-block}
-.emoji{font-size:80px;display:inline-block;animation:bob 2.4s ease-in-out infinite;cursor:default;user-select:none}
-@keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-10px) rotate(4deg)}}
-.emoji-badge{position:absolute;bottom:2px;right:-8px;font-size:22px;animation:bob 2.4s ease-in-out infinite;animation-delay:-.6s}
-h1{margin:10px 0 2px;font-size:34px;font-weight:800;
-  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
-.sub{color:var(--sub);margin:0;font-size:15px}
-.quote{margin:14px auto 0;max-width:380px;font-size:14px;color:var(--sub);
-  background:var(--chip);border-radius:12px;padding:10px 14px;border-left:3px solid var(--accent)}
-.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;justify-content:center}
-.chip{background:var(--chip);color:var(--accent);padding:5px 13px;border-radius:999px;
-  font-size:13px;font-weight:700;border:1px solid rgba(47,158,91,.2);
-  transition:background .15s,transform .15s}
-.chip:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
+.emoji{font-size:80px;display:inline-block;animation:bob 2.6s ease-in-out infinite;cursor:default}
+@keyframes bob{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-12px) rotate(4deg)}}
+h1{margin:10px 0 2px;font-size:36px;font-weight:900;
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;
+  letter-spacing:-.02em}
+.hero-sub{color:var(--sub);margin:0;font-size:15px}
+.quote{margin:14px auto 0;max-width:400px;font-size:14px;color:var(--sub);
+  background:rgba(255,255,255,.7);border-radius:14px;padding:11px 16px;
+  border-left:4px solid var(--accent);backdrop-filter:blur(4px)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;justify-content:center}
+.chip{background:rgba(255,255,255,.8);color:var(--accent);padding:5px 14px;border-radius:999px;
+  font-size:13px;font-weight:700;border:1.5px solid var(--line);cursor:default;
+  transition:background .15s,transform .15s,box-shadow .15s}
+.chip:hover{background:var(--accent);color:#fff;transform:translateY(-3px);box-shadow:0 6px 16px rgba(232,67,147,.3)}
 
 /* ── 카드 ── */
-.card{background:var(--card);border-radius:18px;padding:20px 22px;margin-top:16px;
-  box-shadow:0 2px 12px rgba(0,0,0,.07);border:1px solid var(--line);
-  transition:box-shadow .2s,transform .2s}
-.card:hover{box-shadow:0 6px 24px rgba(47,158,91,.12);transform:translateY(-2px)}
-h2{margin:0 0 12px;font-size:18px;color:var(--accent);display:flex;align-items:center;gap:6px}
+.card{background:var(--card);border-radius:20px;padding:20px 22px;margin-top:16px;
+  box-shadow:0 2px 16px rgba(232,67,147,.08);border:1.5px solid var(--line);
+  transition:box-shadow .25s,transform .25s}
+.card:hover{box-shadow:0 8px 28px rgba(232,67,147,.18);transform:translateY(-3px)}
+h2{margin:0 0 12px;font-size:18px;color:var(--accent);font-weight:800}
 .card p{margin:0 0 8px}.card p:last-child{margin:0}
-
-/* ── 테이블 ── */
 table{width:100%;border-collapse:collapse;font-size:15px}
 td{padding:9px 6px;border-bottom:1px solid var(--line)}
 tr:last-child td{border:0}
-td:first-child{color:var(--sub);width:34%}
-td:last-child{font-weight:600}
-
-/* ── 타임라인 ── */
+td:first-child{color:var(--sub);width:36%}td:last-child{font-weight:600}
 .tl{list-style:none;margin:0;padding:0 0 0 20px;border-left:3px solid var(--chip)}
 .tl li{position:relative;margin-bottom:16px}.tl li:last-child{margin:0}
 .tl li::before{content:"";position:absolute;left:-27px;top:8px;width:12px;height:12px;
   border-radius:50%;background:var(--grad);box-shadow:0 0 0 3px var(--chip)}
-.tl b{display:block;font-size:15px}
-.tl span{color:var(--sub);font-size:14px}
-
-/* ── 그리드 카드 ── */
+.tl b{display:block;font-size:15px}.tl span{color:var(--sub);font-size:14px}
 .grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .mini{background:var(--chip);border-radius:14px;padding:14px;font-size:14px;
-  border:1px solid rgba(47,158,91,.1);transition:background .15s}
-.mini:hover{background:rgba(47,158,91,.15)}
+  border:1px solid rgba(232,67,147,.12);transition:background .15s,transform .15s}
+.mini:hover{background:rgba(232,67,147,.12);transform:scale(1.02)}
 .mini b{display:block;color:var(--accent);margin-bottom:3px;font-size:15px}
 
-/* ── 앵무새 프로필 카드 ── */
-.bird-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:14px}
-.bird-card{background:var(--chip);border-radius:16px;padding:16px;text-align:center;
-  border:1.5px solid rgba(47,158,91,.15);transition:transform .2s,box-shadow .2s}
-.bird-card:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(47,158,91,.18)}
-.bird-emoji{font-size:48px;display:block;margin-bottom:8px;animation:bob 3s ease-in-out infinite}
-.bird-card:last-child .bird-emoji{animation-delay:-1.2s}
-.bird-name{font-size:18px;font-weight:800;color:var(--accent);margin-bottom:2px}
-.bird-species{font-size:12px;color:var(--sub);margin-bottom:8px}
-.bird-tags{display:flex;flex-wrap:wrap;gap:4px;justify-content:center}
-.bird-tag{background:var(--card);border-radius:999px;padding:2px 8px;font-size:12px;
-  color:var(--sub);border:1px solid var(--line)}
+/* ════════════════════════════
+   앵무새 섹션
+════════════════════════════ */
+.bird-section{background:linear-gradient(160deg,#fff0f8,#ffe8f4);border:1.5px solid var(--line);
+  border-radius:20px;padding:22px;margin-top:16px;
+  box-shadow:0 4px 20px rgba(232,67,147,.1)}
+.bird-section h2{color:var(--accent);margin-bottom:6px}
+.bird-section>.desc{color:var(--sub);font-size:14px;margin-bottom:18px}
+
+.bird-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.bird-card{background:rgba(255,255,255,.85);border-radius:18px;padding:20px 16px;
+  text-align:center;border:2px solid var(--line);
+  box-shadow:0 4px 16px rgba(232,67,147,.1);
+  transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.bird-card::before{content:"";position:absolute;top:-30px;right:-30px;
+  width:80px;height:80px;border-radius:50%;opacity:.12}
+.bird-card.bada::before{background:#4caf50}
+.bird-card.hongsi::before{background:#e84393}
+.bird-card:hover{transform:translateY(-6px) rotate(-1deg);box-shadow:0 12px 28px rgba(232,67,147,.22)}
+.bird-card.hongsi:hover{transform:translateY(-6px) rotate(1deg)}
+
+/* SVG 새 */
+.bird-svg{width:90px;height:90px;margin:0 auto 10px;display:block;
+  filter:drop-shadow(0 4px 8px rgba(0,0,0,.12));animation:birdFloat 3.5s ease-in-out infinite}
+.bird-card.hongsi .bird-svg{animation-delay:-1.5s}
+@keyframes birdFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+
+.bird-name{font-size:22px;font-weight:900;margin-bottom:2px}
+.bird-card.bada .bird-name{color:#2e7d32}
+.bird-card.hongsi .bird-name{color:#c2185b}
+.bird-species{font-size:11px;color:var(--sub);margin-bottom:12px;
+  background:var(--chip);border-radius:999px;padding:3px 10px;display:inline-block}
+.bird-tags{display:flex;flex-wrap:wrap;gap:5px;justify-content:center;margin-bottom:12px}
+.bird-tag{background:var(--chip);border-radius:999px;padding:3px 10px;font-size:12px;
+  color:var(--accent);border:1px solid var(--line);font-weight:600}
+.bird-desc{font-size:13px;color:var(--sub);line-height:1.6;text-align:left}
+
+/* 앵무새 특징 비교 */
+.bird-compare{margin-top:16px;border-radius:14px;overflow:hidden;border:1.5px solid var(--line)}
+.bird-compare table{margin:0;font-size:13px}
+.bird-compare td{padding:10px 12px;border-bottom:1px solid var(--line)}
+.bird-compare tr:last-child td{border:0}
+.bird-compare .label{color:var(--sub);font-weight:700;width:30%}
+.bird-compare .bada-val{color:#2e7d32;font-weight:600;text-align:center}
+.bird-compare .hongsi-val{color:#c2185b;font-weight:600;text-align:center}
+.bird-compare th{background:var(--chip);padding:10px 12px;font-weight:800;
+  font-size:12px;text-align:center}
+.bird-compare th.bada-h{color:#2e7d32}.bird-compare th.hongsi-h{color:#c2185b}
+
+/* 앵무새 갤러리 감성 그리드 */
+.bird-facts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:14px}
+.bird-fact{background:var(--chip);border-radius:12px;padding:12px 8px;text-align:center;
+  border:1px solid rgba(232,67,147,.12);transition:transform .2s}
+.bird-fact:hover{transform:scale(1.04)}
+.bird-fact-icon{font-size:26px;display:block;margin-bottom:4px}
+.bird-fact-label{font-size:11px;color:var(--accent);font-weight:700;display:block}
+.bird-fact-val{font-size:12px;color:var(--sub)}
 
 /* ── 게임 배너 ── */
-.game-banner{background:linear-gradient(135deg,#0d1117,#1a2535);border-radius:18px;
-  padding:20px 22px;margin-top:16px;border:1px solid #2a3a55;
-  display:flex;align-items:center;justify-content:space-between;gap:12px;
-  box-shadow:0 4px 20px rgba(0,0,0,.2);text-decoration:none;
-  transition:transform .2s,box-shadow .2s}
-.game-banner:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.35)}
-.game-banner-left h3{margin:0 0 4px;color:#e8f3ec;font-size:17px}
-.game-banner-left p{margin:0;font-size:13px;color:#8fa89a}
+.game-banner{background:linear-gradient(135deg,#1a0a1e,#2d0a2e,#1a0a3a);border-radius:20px;
+  padding:20px 22px;margin-top:16px;border:1px solid #4a1a5a;
+  display:block;text-decoration:none;
+  box-shadow:0 4px 24px rgba(100,0,100,.3);
+  transition:transform .2s,box-shadow .2s;position:relative;overflow:hidden}
+.game-banner::before{content:"";position:absolute;inset:0;
+  background:radial-gradient(ellipse at 20% 50%,rgba(232,67,147,.15),transparent 60%)}
+.game-banner:hover{transform:translateY(-3px);box-shadow:0 10px 32px rgba(100,0,100,.4)}
+.game-banner-inner{display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative;z-index:1}
+.game-banner h3{margin:0 0 4px;color:#ffe4f0;font-size:17px}
+.game-banner p{margin:0;font-size:13px;color:#c47090}
 .game-btns{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
-.game-btn{padding:7px 14px;border-radius:999px;font-size:13px;font-weight:700;
-  text-decoration:none;transition:transform .15s,opacity .15s}
-.game-btn:hover{transform:translateY(-2px);opacity:.85}
-.game-btn.galaga{background:#ffd23f;color:#111}
-.game-btn.pacman{background:#ff4d6d;color:#fff}
-.game-icon{font-size:48px;animation:bob 2s ease-in-out infinite}
+.game-btn{padding:7px 16px;border-radius:999px;font-size:13px;font-weight:700;
+  text-decoration:none;transition:transform .15s,box-shadow .15s;border:none}
+.game-btn:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(0,0,0,.3)}
+.game-btn.galaga{background:linear-gradient(135deg,#ffd23f,#ffb300);color:#1a0a00}
+.game-btn.pacman{background:linear-gradient(135deg,#ff4d8d,#e84393);color:#fff}
+.game-icon{font-size:52px;animation:bob 2.2s ease-in-out infinite;flex-shrink:0}
 
-/* ── 투표·방명록 ── */
+/* ── 투표 ── */
 .vote-btn{width:100%;padding:11px 14px;border-radius:12px;border:1.5px solid var(--line);
   background:var(--chip);color:var(--text);font-size:15px;font-weight:600;
-  cursor:pointer;text-align:left;transition:background .15s,border-color .15s,transform .1s;
-  font-family:inherit}
-.vote-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent);transform:translateX(4px)}
+  cursor:pointer;text-align:left;transition:all .15s;font-family:inherit}
+.vote-btn:hover{background:var(--accent);color:#fff;border-color:var(--accent);transform:translateX(5px)}
 .bar-wrap{margin:6px 0}
 .bar-label{display:flex;justify-content:space-between;font-size:14px;margin-bottom:3px}
 .bar-track{background:var(--line);border-radius:999px;height:10px;overflow:hidden}
 .bar-fill{height:100%;background:var(--grad);border-radius:999px;transition:width .6s cubic-bezier(.2,.8,.2,1)}
-#survey-msg{margin-top:10px;font-size:14px;color:var(--accent);font-weight:700}
 
 footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px;padding-top:20px;
-  border-top:1px solid var(--line)}
+  border-top:1.5px solid var(--line)}
+.footer-birds{font-size:28px;display:block;margin-bottom:4px;animation:bob 3s ease-in-out infinite}
 </style>
 </head>
 <body>
@@ -152,21 +179,20 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px;padding
 
 <!-- ── 히어로 ── -->
 <section class="hero">
-  <div class="hero-bg"><span></span><span></span><span></span></div>
-  <div class="emoji-wrap">
-    <span class="emoji">🦜</span>
-    <span class="emoji-badge">🌿</span>
-  </div>
+  <div class="hero-bubble"></div>
+  <div class="hero-bubble"></div>
+  <div class="hero-bubble"></div>
+  <div class="emoji">🌸</div>
   <h1>차유정</h1>
-  <p class="sub">21살 · 국민대학교 경영정보학부</p>
-  <p class="quote">학교와 알바, 그리고 집에서 기다리는 바다&홍시까지.<br>바쁘지만 알차게 지내는 중이에요 🌿</p>
+  <p class="hero-sub">21살 · 국민대학교 경영정보학부</p>
+  <p class="quote">학교와 알바, 그리고 집에서 기다리는 바다&홍시까지.<br>바쁘지만 알차게 지내는 중이에요 🌸</p>
   <div class="chips">
-    <span class="chip">#경영정보</span>
-    <span class="chip">#앵무새집사</span>
-    <span class="chip">#아웃백알바생</span>
-    <span class="chip">#21살</span>
-    <span class="chip">#바다🦜</span>
-    <span class="chip">#홍시🦜</span>
+    <span class="chip">🌸 경영정보</span>
+    <span class="chip">💗 앵무새집사</span>
+    <span class="chip">🍖 아웃백알바생</span>
+    <span class="chip">💚 바다</span>
+    <span class="chip">❤️ 홍시</span>
+    <span class="chip">✨ 21살</span>
   </div>
 </section>
 
@@ -179,7 +205,7 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px;padding
     <tr><td>학교</td><td>국민대학교</td></tr>
     <tr><td>전공</td><td>경영정보학부</td></tr>
     <tr><td>알바</td><td>아웃백 (현재 근무 중)</td></tr>
-    <tr><td>반려동물</td><td>바다(그린 퀘이커) · 홍시(뉴기니아 암컷) 🦜🦜</td></tr>
+    <tr><td>반려 앵무새</td><td>바다(💚) · 홍시(❤️)</td></tr>
   </table>
 </section>
 
@@ -187,7 +213,7 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px;padding
 <section class="card">
   <h2>👋 안녕하세요!</h2>
   <p>국민대학교 경영정보학부에 다니는 21살 차유정이에요. 학교에서는 경영과 정보기술을 함께 배우고, 학교 밖에서는 아웃백에서 일하며 하루하루를 채우고 있어요.</p>
-  <p>집에 돌아오면 바다와 홍시가 반겨 줘서, 바쁜 하루의 피로가 금방 풀려요 💚</p>
+  <p>집에 돌아오면 바다와 홍시가 반겨 줘서, 바쁜 하루의 피로가 금방 풀려요 💗</p>
 </section>
 
 <!-- ── 경영정보학부 ── -->
@@ -206,42 +232,151 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px;padding
 <section class="card">
   <h2>🍖 요즘 근황: 아웃백 알바 중</h2>
   <p>요즘은 아웃백에서 아르바이트를 하고 있어요. 손님을 맞이하고 팀원들과 호흡을 맞추며 일하는 경험이 쌓이는 중이에요.</p>
-  <p>학교 생활과 알바를 병행하느라 바쁘지만, 스스로 일하며 배우는 시간도 소중하다고 느껴요.</p>
+  <p>학교 생활과 알바를 병행하느라 바쁘지만, 스스로 일하며 배우는 시간도 소중하다고 느껴요 🌸</p>
 </section>
 
-<!-- ── 앵무새 ── -->
-<section class="card">
-  <h2>🦜 두 마리의 집사 일상</h2>
-  <p>저희 집에는 개성 넘치는 앵무새 두 마리가 살고 있어요. 매일 말을 걸고 놀아 주다 보면 정이 한가득 쌓여요 💚</p>
+<!-- ══════════════════════════
+     앵무새 섹션
+══════════════════════════ -->
+<div class="bird-section">
+  <h2>🦜 나의 소울메이트, 바다 & 홍시</h2>
+  <p class="desc">집에 오면 제일 먼저 반겨 주는 두 존재예요. 성격도 종도 다르지만, 둘 다 제 마음의 힐링이에요 💗</p>
+
   <div class="bird-cards">
-    <div class="bird-card">
-      <span class="bird-emoji">💚</span>
-      <div class="bird-name">바다</div>
+    <!-- 바다 -->
+    <div class="bird-card bada">
+      <!-- 그린 퀘이커 SVG -->
+      <svg class="bird-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- 몸통 -->
+        <ellipse cx="50" cy="58" rx="22" ry="26" fill="#43a047"/>
+        <!-- 배 -->
+        <ellipse cx="50" cy="65" rx="13" ry="17" fill="#a5d6a7"/>
+        <!-- 날개 왼쪽 -->
+        <ellipse cx="30" cy="58" rx="10" ry="18" fill="#2e7d32" transform="rotate(-15 30 58)"/>
+        <!-- 날개 오른쪽 -->
+        <ellipse cx="70" cy="58" rx="10" ry="18" fill="#2e7d32" transform="rotate(15 70 58)"/>
+        <!-- 머리 -->
+        <circle cx="50" cy="34" r="18" fill="#43a047"/>
+        <!-- 이마 파란 패치 -->
+        <ellipse cx="50" cy="27" rx="9" ry="6" fill="#1565c0"/>
+        <!-- 눈 흰자 -->
+        <circle cx="43" cy="33" r="5" fill="white"/>
+        <circle cx="57" cy="33" r="5" fill="white"/>
+        <!-- 눈동자 -->
+        <circle cx="44" cy="33" r="3" fill="#1a1a1a"/>
+        <circle cx="58" cy="33" r="3" fill="#1a1a1a"/>
+        <!-- 눈 반짝임 -->
+        <circle cx="45" cy="32" r="1.2" fill="white"/>
+        <circle cx="59" cy="32" r="1.2" fill="white"/>
+        <!-- 부리 -->
+        <path d="M47 39 Q50 44 53 39 Q50 37 47 39Z" fill="#f9a825"/>
+        <!-- 볼터치 -->
+        <ellipse cx="39" cy="38" rx="4" ry="3" fill="#66bb6a" opacity=".5"/>
+        <ellipse cx="61" cy="38" rx="4" ry="3" fill="#66bb6a" opacity=".5"/>
+        <!-- 꼬리 -->
+        <path d="M42 82 Q50 95 58 82" fill="#2e7d32" stroke="#1b5e20" stroke-width="1"/>
+        <!-- 발 -->
+        <line x1="44" y1="84" x2="40" y2="92" stroke="#f9a825" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="56" y1="84" x2="60" y2="92" stroke="#f9a825" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <div class="bird-name">바다 🌊</div>
       <div class="bird-species">그린 퀘이커 파라킷</div>
       <div class="bird-tags">
         <span class="bird-tag">초록이</span>
         <span class="bird-tag">수다왕</span>
-        <span class="bird-tag">호기심 많음</span>
+        <span class="bird-tag">호기심 대폭발</span>
       </div>
+      <p class="bird-desc">이름처럼 시원하고 활발한 성격이에요. 집 안을 혼자 탐험하고, 새로운 것을 보면 무조건 쪼아 봐야 직성이 풀려요. 말 흉내를 잘 내서 가끔 깜짝 놀라기도 해요 😂</p>
     </div>
-    <div class="bird-card">
-      <span class="bird-emoji">🧡</span>
-      <div class="bird-name">홍시</div>
+
+    <!-- 홍시 -->
+    <div class="bird-card hongsi">
+      <!-- 뉴기니아 싱잉 패럿 SVG -->
+      <svg class="bird-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- 몸통 -->
+        <ellipse cx="50" cy="58" rx="22" ry="26" fill="#e53935"/>
+        <!-- 배 (노란빛) -->
+        <ellipse cx="50" cy="65" rx="13" ry="17" fill="#ff8a65"/>
+        <!-- 날개 왼쪽 -->
+        <ellipse cx="30" cy="58" rx="10" ry="18" fill="#b71c1c" transform="rotate(-15 30 58)"/>
+        <!-- 날개 오른쪽 -->
+        <ellipse cx="70" cy="58" rx="10" ry="18" fill="#b71c1c" transform="rotate(15 70 58)"/>
+        <!-- 날개 포인트 초록 -->
+        <ellipse cx="28" cy="62" rx="5" ry="10" fill="#43a047" opacity=".7" transform="rotate(-15 28 62)"/>
+        <ellipse cx="72" cy="62" rx="5" ry="10" fill="#43a047" opacity=".7" transform="rotate(15 72 62)"/>
+        <!-- 머리 -->
+        <circle cx="50" cy="34" r="18" fill="#e53935"/>
+        <!-- 머리 무늬 (파란 이마) -->
+        <ellipse cx="50" cy="26" rx="10" ry="7" fill="#7b1fa2"/>
+        <!-- 눈 흰자 -->
+        <circle cx="43" cy="33" r="5" fill="white"/>
+        <circle cx="57" cy="33" r="5" fill="white"/>
+        <!-- 눈동자 -->
+        <circle cx="44" cy="33" r="3" fill="#1a1a1a"/>
+        <circle cx="58" cy="33" r="3" fill="#1a1a1a"/>
+        <!-- 눈 반짝임 -->
+        <circle cx="45" cy="32" r="1.2" fill="white"/>
+        <circle cx="59" cy="32" r="1.2" fill="white"/>
+        <!-- 부리 -->
+        <path d="M47 39 Q50 44 53 39 Q50 37 47 39Z" fill="#f9a825"/>
+        <!-- 볼터치 핑크 -->
+        <ellipse cx="39" cy="38" rx="4" ry="3" fill="#ff80ab" opacity=".6"/>
+        <ellipse cx="61" cy="38" rx="4" ry="3" fill="#ff80ab" opacity=".6"/>
+        <!-- 꼬리 -->
+        <path d="M42 82 Q50 97 58 82" fill="#b71c1c" stroke="#7f0000" stroke-width="1"/>
+        <!-- 꼬리 초록 포인트 -->
+        <path d="M47 85 Q50 96 53 85" fill="#43a047" opacity=".8"/>
+        <!-- 발 -->
+        <line x1="44" y1="84" x2="40" y2="92" stroke="#f9a825" stroke-width="2.5" stroke-linecap="round"/>
+        <line x1="56" y1="84" x2="60" y2="92" stroke="#f9a825" stroke-width="2.5" stroke-linecap="round"/>
+      </svg>
+      <div class="bird-name">홍시 🍅</div>
       <div class="bird-species">뉴기니아 싱잉 패럿 ♀</div>
       <div class="bird-tags">
-        <span class="bird-tag">암컷</span>
+        <span class="bird-tag">빨간이</span>
         <span class="bird-tag">새침함</span>
         <span class="bird-tag">간식러버</span>
       </div>
+      <p class="bird-desc">이름처럼 빨갛고 사랑스러운 암컷이에요. 평소엔 도도하지만 간식 앞에서는 금방 순해져요. 기분이 좋으면 혼자 노래를 흥얼거리는 귀여운 습관이 있어요 🎵</p>
     </div>
   </div>
-  <div class="grid" style="margin-top:14px">
-    <div class="mini"><b>🎵 소리 흉내</b>흉내 내기 천재 콤비</div>
-    <div class="mini"><b>🌞 아침형</b>해가 뜨면 함께 기상</div>
-    <div class="mini"><b>🥜 간식</b>간식 앞에선 둘 다 순한 양</div>
-    <div class="mini"><b>💚 힐링</b>제 마음의 비타민</div>
+
+  <!-- 비교 테이블 -->
+  <div class="bird-compare" style="margin-top:16px">
+    <table style="width:100%;margin:0">
+      <tr>
+        <th style="background:var(--chip);padding:10px;font-size:13px;text-align:left;color:var(--sub)">비교</th>
+        <th class="bada-h" style="background:#e8f5e9;padding:10px;font-size:13px">💚 바다</th>
+        <th class="hongsi-h" style="background:#fce4ec;padding:10px;font-size:13px">❤️ 홍시</th>
+      </tr>
+      <tr>
+        <td class="label" style="padding:10px;color:var(--sub);font-size:13px;font-weight:700">성격</td>
+        <td class="bada-val" style="padding:10px;color:#2e7d32;font-size:13px;text-align:center;font-weight:600">활발 · 외향적</td>
+        <td class="hongsi-val" style="padding:10px;color:#c2185b;font-size:13px;text-align:center;font-weight:600">새침 · 내향적</td>
+      </tr>
+      <tr>
+        <td class="label" style="padding:10px;color:var(--sub);font-size:13px;font-weight:700;border-bottom:1px solid var(--line)">특기</td>
+        <td class="bada-val" style="padding:10px;color:#2e7d32;font-size:13px;text-align:center;font-weight:600;border-bottom:1px solid var(--line)">말 흉내</td>
+        <td class="hongsi-val" style="padding:10px;color:#c2185b;font-size:13px;text-align:center;font-weight:600;border-bottom:1px solid var(--line)">흥얼거리기</td>
+      </tr>
+      <tr>
+        <td class="label" style="padding:10px;color:var(--sub);font-size:13px;font-weight:700">최애 간식</td>
+        <td class="bada-val" style="padding:10px;color:#2e7d32;font-size:13px;text-align:center;font-weight:600">해바라기씨</td>
+        <td class="hongsi-val" style="padding:10px;color:#c2185b;font-size:13px;text-align:center;font-weight:600">과일 간식</td>
+      </tr>
+    </table>
   </div>
-</section>
+
+  <!-- 앵무새 생활 팩트 -->
+  <div class="bird-facts">
+    <div class="bird-fact"><span class="bird-fact-icon">🌅</span><span class="bird-fact-label">기상 시간</span><span class="bird-fact-val">해 뜨면 같이</span></div>
+    <div class="bird-fact"><span class="bird-fact-icon">🎵</span><span class="bird-fact-label">음악 취향</span><span class="bird-fact-val">팝송 좋아함</span></div>
+    <div class="bird-fact"><span class="bird-fact-icon">🛁</span><span class="bird-fact-label">목욕</span><span class="bird-fact-val">물 뿌려주면 신남</span></div>
+    <div class="bird-fact"><span class="bird-fact-icon">😴</span><span class="bird-fact-label">취침</span><span class="bird-fact-val">해 지면 잠</span></div>
+    <div class="bird-fact"><span class="bird-fact-icon">🤝</span><span class="bird-fact-label">사이</span><span class="bird-fact-val">티격태격 친구</span></div>
+    <div class="bird-fact"><span class="bird-fact-icon">💗</span><span class="bird-fact-label">애정 표현</span><span class="bird-fact-val">깃털 고르기</span></div>
+  </div>
+</div>
 
 <!-- ── 하루 흐름 ── -->
 <section class="card">
@@ -249,27 +384,29 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px;padding
   <ul class="tl">
     <li><b>🎓 학교</b><span>수업과 팀 프로젝트로 배우는 시간</span></li>
     <li><b>🍖 아웃백</b><span>알바로 일하며 경험을 쌓는 시간</span></li>
-    <li><b>🦜 집</b><span>바다·홍시와 보내는 힐링 타임</span></li>
+    <li><b>🦜 집</b><span>바다·홍시와 보내는 힐링 타임 💗</span></li>
   </ul>
 </section>
 
 <!-- ── 게임 배너 ── -->
-<a class="game-banner" href="pacman/" style="display:flex">
-  <div class="game-banner-left">
-    <h3>🎮 미니게임 플레이하기</h3>
-    <p>심심할 때 잠깐 즐겨보세요!</p>
-    <div class="game-btns">
-      <a class="game-btn galaga" href="galaga-index.html">🚀 Galaga</a>
-      <a class="game-btn pacman" href="pacman/">🟡 Pac-Man</a>
+<a class="game-banner" href="pacman/">
+  <div class="game-banner-inner">
+    <div>
+      <h3>🎮 미니게임 플레이하기</h3>
+      <p>심심할 때 잠깐 즐겨보세요!</p>
+      <div class="game-btns">
+        <a class="game-btn galaga" href="galaga-index.html">🚀 Galaga</a>
+        <a class="game-btn pacman" href="pacman/">🟡 Pac-Man</a>
+      </div>
     </div>
+    <div class="game-icon">👾</div>
   </div>
-  <div class="game-icon">👾</div>
 </a>
 
 <!-- ── 콘텐츠 선호도 조사 ── -->
 <section class="card" id="survey-section">
   <h2>📊 콘텐츠 선호도 조사</h2>
-  <p style="color:var(--sub);font-size:14px;margin-bottom:14px">제 페이지에서 어떤 콘텐츠가 가장 좋았나요? 하나만 골라주세요 😊</p>
+  <p style="color:var(--sub);font-size:14px;margin-bottom:14px">제 페이지에서 어떤 콘텐츠가 가장 좋았나요? 하나만 골라주세요 💗</p>
   <div id="survey-opts" style="display:grid;gap:8px">
     <button class="vote-btn" data-topic="자기소개">👤 자기소개</button>
     <button class="vote-btn" data-topic="경영정보학부">🎓 경영정보학부 소개</button>
@@ -283,14 +420,14 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px;padding
 <!-- ── 방명록 ── -->
 <section class="card" id="guestbook-section">
   <h2>💌 방명록</h2>
-  <p style="color:var(--sub);font-size:14px;margin-bottom:14px">방문 기념으로 한 마디 남겨주세요 😊</p>
+  <p style="color:var(--sub);font-size:14px;margin-bottom:14px">방문 기념으로 한 마디 남겨주세요 🌸</p>
   <div style="display:grid;gap:8px;margin-bottom:14px">
     <input id="gb-name" type="text" placeholder="이름 (닉네임 가능)" maxlength="20"
-      style="padding:10px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--text);font-size:15px;font-family:inherit;outline:none">
+      style="padding:10px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--text);font-size:15px;font-family:inherit;outline:none">
     <textarea id="gb-msg" placeholder="메시지를 입력하세요" maxlength="200" rows="3"
-      style="padding:10px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--bg);color:var(--text);font-size:15px;font-family:inherit;outline:none;resize:none"></textarea>
+      style="padding:10px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--text);font-size:15px;font-family:inherit;outline:none;resize:none"></textarea>
     <button id="gb-submit"
-      style="padding:11px;border-radius:10px;border:none;background:var(--grad);color:#fff;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit;transition:opacity .15s">
+      style="padding:11px;border-radius:12px;border:none;background:var(--grad);color:#fff;font-size:15px;font-weight:700;cursor:pointer;font-family:inherit">
       남기기 ✉️
     </button>
     <p id="gb-status" style="font-size:13px;color:var(--accent);margin:0;min-height:18px"></p>
@@ -298,39 +435,38 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px;padding
   <div id="gb-list" style="display:grid;gap:10px"></div>
 </section>
 
-<footer>🦜 바다 & 홍시와 함께 · © 차유정</footer>
+<footer>
+  <span class="footer-birds">💚🦜❤️</span>
+  바다 & 홍시와 함께 · © 차유정
+</footer>
 </main>
 
 <script>
 (async () => {
   const SUPA_URL = 'https://ixubwvjarrwuvyndzupg.supabase.co';
   const SUPA_KEY = 'sb_publishable_Njo1vuU_aIdFpKS4hi1h7w_-KCq_ZOa';
-  const H = { 'Content-Type':'application/json', 'apikey':SUPA_KEY, 'Authorization':'Bearer '+SUPA_KEY };
+  const H = {'Content-Type':'application/json','apikey':SUPA_KEY,'Authorization':'Bearer '+SUPA_KEY};
 
-  /* ── 선호도 조사 ── */
-  const TOPICS = ['자기소개','경영정보학부','아웃백알바','앵무새','게임'];
-  const LABELS = {'자기소개':'👤 자기소개','경영정보학부':'🎓 경영정보학부 소개','아웃백알바':'🍖 아웃백 알바 이야기','앵무새':'🦜 바다·홍시 이야기','게임':'🎮 Galaga·Pac-Man 게임'};
-
-  async function fetchResult() {
-    const rows = await fetch(`${SUPA_URL}/rest/v1/survey?select=topic`,{headers:H}).then(r=>r.json());
-    const c = Object.fromEntries(TOPICS.map(t=>[t,0]));
-    rows.forEach(r=>{ if(c[r.topic]!==undefined) c[r.topic]++; });
+  /* ── 선호도 ── */
+  const TOPICS=['자기소개','경영정보학부','아웃백알바','앵무새','게임'];
+  const LABELS={'자기소개':'👤 자기소개','경영정보학부':'🎓 경영정보학부 소개','아웃백알바':'🍖 아웃백 알바 이야기','앵무새':'🦜 바다·홍시 이야기','게임':'🎮 Galaga·Pac-Man 게임'};
+  async function fetchResult(){
+    const rows=await fetch(`${SUPA_URL}/rest/v1/survey?select=topic`,{headers:H}).then(r=>r.json());
+    const c=Object.fromEntries(TOPICS.map(t=>[t,0]));
+    rows.forEach(r=>{if(c[r.topic]!==undefined)c[r.topic]++;});
     return c;
   }
-
-  async function showResult(voted) {
-    const c = await fetchResult();
-    const total = Object.values(c).reduce((a,b)=>a+b,0)||1;
-    const el = document.getElementById('survey-result');
+  async function showResult(voted){
+    const c=await fetchResult();
+    const total=Object.values(c).reduce((a,b)=>a+b,0)||1;
+    const el=document.getElementById('survey-result');
     el.style.display='block';
-    el.innerHTML=`
-      <p style="font-weight:700;margin:0 0 10px">📈 현재 결과 (총 ${total}표)</p>
-      ${TOPICS.map(t=>`
-        <div class="bar-wrap">
-          <div class="bar-label"><span>${LABELS[t]}</span><span>${c[t]}표 (${Math.round(c[t]/total*100)}%)</span></div>
-          <div class="bar-track"><div class="bar-fill" style="width:${Math.round(c[t]/total*100)}%"></div></div>
-        </div>`).join('')}
-      ${voted?'<p id="survey-msg">✅ 투표해 주셔서 감사해요!</p>':''}
+    el.innerHTML=`<p style="font-weight:700;margin:0 0 10px">📈 현재 결과 (총 ${total}표)</p>
+      ${TOPICS.map(t=>`<div class="bar-wrap">
+        <div class="bar-label"><span>${LABELS[t]}</span><span>${c[t]}표 (${Math.round(c[t]/total*100)}%)</span></div>
+        <div class="bar-track"><div class="bar-fill" style="width:${Math.round(c[t]/total*100)}%"></div></div>
+      </div>`).join('')}
+      ${voted?'<p style="margin-top:10px;font-size:14px;color:var(--accent);font-weight:700">✅ 투표해 주셔서 감사해요!</p>':''}
       <button id="retry-btn" style="margin-top:10px;background:none;border:none;color:var(--sub);font-size:13px;cursor:pointer;text-decoration:underline">다시 투표하기</button>`;
     document.getElementById('retry-btn').onclick=()=>{
       localStorage.removeItem('survey_voted');
@@ -338,12 +474,7 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px;padding
       el.style.display='none';
     };
   }
-
-  if(localStorage.getItem('survey_voted')){
-    document.getElementById('survey-opts').style.display='none';
-    showResult(false);
-  }
-
+  if(localStorage.getItem('survey_voted')){document.getElementById('survey-opts').style.display='none';showResult(false);}
   document.querySelectorAll('.vote-btn').forEach(btn=>{
     btn.addEventListener('click',async()=>{
       document.querySelectorAll('.vote-btn').forEach(b=>b.disabled=true);
@@ -355,16 +486,13 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px;padding
   });
 
   /* ── 방명록 ── */
-  async function loadMessages() {
-    const rows = await fetch(`${SUPA_URL}/rest/v1/guestbook?select=*&order=created_at.desc&limit=20`,{headers:H}).then(r=>r.json());
-    const list = document.getElementById('gb-list');
-    if(!Array.isArray(rows)||rows.length===0){
-      list.innerHTML='<p style="color:var(--sub);font-size:14px;text-align:center">아직 방명록이 없어요. 첫 번째로 남겨보세요!</p>';
-      return;
-    }
+  async function loadMessages(){
+    const rows=await fetch(`${SUPA_URL}/rest/v1/guestbook?select=*&order=created_at.desc&limit=20`,{headers:H}).then(r=>r.json());
+    const list=document.getElementById('gb-list');
+    if(!Array.isArray(rows)||rows.length===0){list.innerHTML='<p style="color:var(--sub);font-size:14px;text-align:center">아직 방명록이 없어요. 첫 번째로 남겨보세요!</p>';return;}
     list.innerHTML=rows.map(r=>{
       const date=new Date(r.created_at).toLocaleDateString('ko-KR',{month:'long',day:'numeric',hour:'2-digit',minute:'2-digit'});
-      return `<div style="background:var(--chip);border-radius:12px;padding:12px 14px">
+      return `<div style="background:var(--chip);border-radius:12px;padding:12px 14px;border:1px solid var(--line)">
         <div style="display:flex;justify-content:space-between;margin-bottom:4px">
           <span style="font-weight:700;color:var(--accent)">${r.name}</span>
           <span style="font-size:12px;color:var(--sub)">${date}</span>
@@ -373,7 +501,6 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px;padding
       </div>`;
     }).join('');
   }
-
   document.getElementById('gb-submit').addEventListener('click',async()=>{
     const name=document.getElementById('gb-name').value.trim();
     const msg=document.getElementById('gb-msg').value.trim();
@@ -384,17 +511,12 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px;padding
     status.textContent='저장 중...';
     const res=await fetch(`${SUPA_URL}/rest/v1/guestbook`,{method:'POST',headers:{...H,'Prefer':'return=minimal'},body:JSON.stringify({name,message:msg})});
     if(res.ok){
-      document.getElementById('gb-name').value='';
-      document.getElementById('gb-msg').value='';
+      document.getElementById('gb-name').value='';document.getElementById('gb-msg').value='';
       status.textContent='✅ 방명록이 등록됐어요!';
-      await loadMessages();
-      setTimeout(()=>{status.textContent='';},3000);
-    }else{
-      status.textContent='❌ 저장에 실패했어요. 다시 시도해주세요.';
-    }
+      await loadMessages();setTimeout(()=>{status.textContent='';},3000);
+    }else{status.textContent='❌ 저장에 실패했어요.';}
     document.getElementById('gb-submit').disabled=false;
   });
-
   loadMessages();
 })();
 </script>
