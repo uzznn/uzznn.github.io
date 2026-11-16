@@ -91,6 +91,14 @@ td:first-child{color:var(--sub);width:36%}td:last-child{font-weight:600}
 .bird-section>.desc{color:var(--sub);font-size:14px;margin-bottom:18px}
 
 .bird-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+
+/* ── 카드 뒤집기 ── */
+.bird-card-wrap{perspective:1000px;cursor:pointer}
+.bird-card-inner{position:relative;width:100%;transition:transform .6s cubic-bezier(.4,.2,.2,1);transform-style:preserve-3d;min-height:380px}
+.bird-card-wrap.flipped .bird-card-inner{transform:rotateY(180deg)}
+.bird-front,.bird-back{position:absolute;width:100%;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:18px}
+.bird-back{transform:rotateY(180deg);background:var(--chip);border:2px solid var(--line);padding:20px 16px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:380px}
+
 .bird-card{background:rgba(255,255,255,.85);border-radius:18px;padding:20px 16px;
   text-align:center;border:2px solid var(--line);
   box-shadow:0 4px 16px rgba(232,67,147,.1);
@@ -187,12 +195,12 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px;padding
   <p class="hero-sub">21살 · 국민대학교 경영정보학부</p>
   <p class="quote">학교와 알바, 그리고 집에서 기다리는 바다&홍시까지.<br>바쁘지만 알차게 지내는 중이에요 🌸</p>
   <div class="chips">
-    <span class="chip">🌸 경영정보</span>
-    <span class="chip">💗 앵무새집사</span>
-    <span class="chip">🍖 아웃백알바생</span>
-    <span class="chip">💚 바다</span>
-    <span class="chip">❤️ 홍시</span>
-    <span class="chip">✨ 21살</span>
+    <span class="chip" onclick="document.getElementById('intro').scrollIntoView({behavior:'smooth'})">🌸 경영정보</span>
+    <span class="chip" onclick="document.getElementById('bird-section').scrollIntoView({behavior:'smooth'})">💗 앵무새집사</span>
+    <span class="chip" onclick="document.getElementById('outback').scrollIntoView({behavior:'smooth'})">🍖 아웃백알바생</span>
+    <span class="chip" onclick="document.getElementById('bird-section').scrollIntoView({behavior:'smooth'})">💚 바다</span>
+    <span class="chip" onclick="document.getElementById('bird-section').scrollIntoView({behavior:'smooth'})">❤️ 홍시</span>
+    <span class="chip" onclick="document.getElementById('game-banner').scrollIntoView({behavior:'smooth'})">✨ 21살</span>
   </div>
 </section>
 
@@ -210,7 +218,7 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px;padding
 </section>
 
 <!-- ── 안녕하세요 ── -->
-<section class="card">
+<section class="card" id="intro">
   <h2>👋 안녕하세요!</h2>
   <p>국민대학교 경영정보학부에 다니는 21살 차유정이에요. 학교에서는 경영과 정보기술을 함께 배우고, 학교 밖에서는 아웃백에서 일하며 하루하루를 채우고 있어요.</p>
   <p>집에 돌아오면 바다와 홍시가 반겨 줘서, 바쁜 하루의 피로가 금방 풀려요 💗</p>
@@ -219,7 +227,7 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px;padding
 <!-- ── 경영정보학부 ── -->
 <section class="card">
   <h2>🎓 경영정보학부는 어떤 곳?</h2>
-  <p>경영정보학은 <b>기업 경영</b>과 <b>정보기술(IT)</b>을 연결하는 융합 학문이에요. 단순히 코딩을 배우는 것도, 단순히 경영만 배우는 것도 아닌, 두 분야를 함께 이해해서 실제 비즈니스 문제를 기술로 풀어내는 사람을 키우는 곳이에요.</p>
+  <p>경영정보학은 <b></b>기업 경영</b>과 <b>정보기술(IT)</b>을 연결하는 융합 학문이에요. 단순히 코딩을 배우는 것도, 단순히 경영만 배우는 것도 아닌, 두 분야를 함께 이해해서 실제 비즈니스 문제를 기술로 풀어내는 사람을 키우는 곳이에요.</p>
   <p>예를 들어 "이 회사는 왜 매출이 줄었을까?"라는 질문을 데이터로 분석하고, IT 시스템으로 해결책을 설계하는 게 경영정보학의 핵심이에요. 요즘처럼 데이터와 AI가 중요한 시대에 정말 필요한 학문이라고 생각해요 💗</p>
   <div class="grid" style="margin-top:14px">
     <div class="mini"><b>📊 데이터 분석</b>숫자 속에서 인사이트 찾기</div>
@@ -236,7 +244,7 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px;padding
 </section>
 
 <!-- ── 아웃백 ── -->
-<section class="card">
+<section class="card" id="outback">
   <h2>🍖 요즘 근황: 아웃백 알바 중</h2>
   <p>요즘은 아웃백에서 아르바이트를 하고 있어요. 손님을 맞이하고 팀원들과 호흡을 맞추며 일하는 경험이 쌓이는 중이에요.</p>
   <p>학교 생활과 알바를 병행하느라 바쁘지만, 스스로 일하며 배우는 시간도 소중하다고 느껴요 🌸</p>
@@ -245,106 +253,96 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px;padding
 <!-- ══════════════════════════
      앵무새 섹션
 ══════════════════════════ -->
-<div class="bird-section">
+<div class="bird-section" id="bird-section">
   <h2>🦜 나의 소울메이트, 바다 & 홍시</h2>
-  <p class="desc">집에 오면 제일 먼저 반겨 주는 두 존재예요. 성격도 종도 다르지만, 둘 다 제 마음의 힐링이에요 💗</p>
+  <p class="desc">집에 오면 제일 먼저 반겨 주는 두 존재예요. 성격도 종도 다르지만, 둘 다 제 마음의 힐링이에요 💗<br><small style="color:var(--sub)">카드를 클릭하면 뒤집혀요 👆</small></p>
 
   <div class="bird-cards">
     <!-- 바다 -->
-    <div class="bird-card bada">
-      <!-- 그린 퀘이커 SVG -->
-      <svg class="bird-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <!-- 몸통 -->
-        <ellipse cx="50" cy="58" rx="22" ry="26" fill="#43a047"/>
-        <!-- 배 -->
-        <ellipse cx="50" cy="65" rx="13" ry="17" fill="#a5d6a7"/>
-        <!-- 날개 왼쪽 -->
-        <ellipse cx="30" cy="58" rx="10" ry="18" fill="#2e7d32" transform="rotate(-15 30 58)"/>
-        <!-- 날개 오른쪽 -->
-        <ellipse cx="70" cy="58" rx="10" ry="18" fill="#2e7d32" transform="rotate(15 70 58)"/>
-        <!-- 머리 -->
-        <circle cx="50" cy="34" r="18" fill="#43a047"/>
-        <!-- 이마 파란 패치 -->
-        <ellipse cx="50" cy="27" rx="9" ry="6" fill="#1565c0"/>
-        <!-- 눈 흰자 -->
-        <circle cx="43" cy="33" r="5" fill="white"/>
-        <circle cx="57" cy="33" r="5" fill="white"/>
-        <!-- 눈동자 -->
-        <circle cx="44" cy="33" r="3" fill="#1a1a1a"/>
-        <circle cx="58" cy="33" r="3" fill="#1a1a1a"/>
-        <!-- 눈 반짝임 -->
-        <circle cx="45" cy="32" r="1.2" fill="white"/>
-        <circle cx="59" cy="32" r="1.2" fill="white"/>
-        <!-- 부리 -->
-        <path d="M47 39 Q50 44 53 39 Q50 37 47 39Z" fill="#f9a825"/>
-        <!-- 볼터치 -->
-        <ellipse cx="39" cy="38" rx="4" ry="3" fill="#66bb6a" opacity=".5"/>
-        <ellipse cx="61" cy="38" rx="4" ry="3" fill="#66bb6a" opacity=".5"/>
-        <!-- 꼬리 -->
-        <path d="M42 82 Q50 95 58 82" fill="#2e7d32" stroke="#1b5e20" stroke-width="1"/>
-        <!-- 발 -->
-        <line x1="44" y1="84" x2="40" y2="92" stroke="#f9a825" stroke-width="2.5" stroke-linecap="round"/>
-        <line x1="56" y1="84" x2="60" y2="92" stroke="#f9a825" stroke-width="2.5" stroke-linecap="round"/>
-      </svg>
-      <div class="bird-name">바다 🌊</div>
-      <div class="bird-species">그린 퀘이커 파라킷</div>
-      <div class="bird-tags">
-        <span class="bird-tag">초록이</span>
-        <span class="bird-tag">수다왕</span>
-        <span class="bird-tag">호기심 대폭발</span>
+    <div class="bird-card-wrap" onclick="this.classList.toggle('flipped')">
+      <div class="bird-card-inner">
+        <!-- 앞면 -->
+        <div class="bird-card bada bird-front">
+          <svg class="bird-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="50" cy="58" rx="22" ry="26" fill="#43a047"/>
+            <ellipse cx="50" cy="65" rx="13" ry="17" fill="#a5d6a7"/>
+            <ellipse cx="30" cy="58" rx="10" ry="18" fill="#2e7d32" transform="rotate(-15 30 58)"/>
+            <ellipse cx="70" cy="58" rx="10" ry="18" fill="#2e7d32" transform="rotate(15 70 58)"/>
+            <circle cx="50" cy="34" r="18" fill="#43a047"/>
+            <ellipse cx="50" cy="27" rx="9" ry="6" fill="#1565c0"/>
+            <circle cx="43" cy="33" r="5" fill="white"/><circle cx="57" cy="33" r="5" fill="white"/>
+            <circle cx="44" cy="33" r="3" fill="#1a1a1a"/><circle cx="58" cy="33" r="3" fill="#1a1a1a"/>
+            <circle cx="45" cy="32" r="1.2" fill="white"/><circle cx="59" cy="32" r="1.2" fill="white"/>
+            <path d="M47 39 Q50 44 53 39 Q50 37 47 39Z" fill="#f9a825"/>
+            <ellipse cx="39" cy="38" rx="4" ry="3" fill="#66bb6a" opacity=".5"/>
+            <ellipse cx="61" cy="38" rx="4" ry="3" fill="#66bb6a" opacity=".5"/>
+            <path d="M42 82 Q50 95 58 82" fill="#2e7d32" stroke="#1b5e20" stroke-width="1"/>
+            <line x1="44" y1="84" x2="40" y2="92" stroke="#f9a825" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="56" y1="84" x2="60" y2="92" stroke="#f9a825" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <div class="bird-name">바다 🌊</div>
+          <div class="bird-species">그린 퀘이커 파라킷</div>
+          <div class="bird-tags">
+            <span class="bird-tag">초록이</span><span class="bird-tag">수다왕</span><span class="bird-tag">호기심 대폭발</span>
+          </div>
+          <p class="bird-desc">이름처럼 시원하고 활발한 성격이에요. 집 안을 혼자 탐험하고, 새로운 것을 보면 무조건 쪼아 봐야 직성이 풀려요 😂</p>
+        </div>
+        <!-- 뒷면 -->
+        <div class="bird-card bada bird-back">
+          <div style="font-size:48px;margin-bottom:10px">📸</div>
+          <div class="bird-name" style="margin-bottom:8px">바다 실제 사진</div>
+          <div style="background:rgba(255,255,255,.5);border-radius:14px;padding:16px;font-size:13px;color:#2e7d32;font-weight:600">
+            💚 그린 퀘이커<br><br>
+            초록빛 깃털과<br>파란 이마가 특징인<br>우리 바다예요 🌊<br><br>
+            <span style="font-size:12px;color:var(--sub)">사진을 추가하려면<br>이미지를 직접 넣어주세요</span>
+          </div>
+        </div>
       </div>
-      <p class="bird-desc">이름처럼 시원하고 활발한 성격이에요. 집 안을 혼자 탐험하고, 새로운 것을 보면 무조건 쪼아 봐야 직성이 풀려요. 말 흉내를 잘 내서 가끔 깜짝 놀라기도 해요 😂</p>
     </div>
 
     <!-- 홍시 -->
-    <div class="bird-card hongsi">
-      <!-- 뉴기니아 싱잉 패럿 SVG -->
-      <svg class="bird-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
-        <!-- 몸통 -->
-        <ellipse cx="50" cy="58" rx="22" ry="26" fill="#e53935"/>
-        <!-- 배 (노란빛) -->
-        <ellipse cx="50" cy="65" rx="13" ry="17" fill="#ff8a65"/>
-        <!-- 날개 왼쪽 -->
-        <ellipse cx="30" cy="58" rx="10" ry="18" fill="#b71c1c" transform="rotate(-15 30 58)"/>
-        <!-- 날개 오른쪽 -->
-        <ellipse cx="70" cy="58" rx="10" ry="18" fill="#b71c1c" transform="rotate(15 70 58)"/>
-        <!-- 날개 포인트 초록 -->
-        <ellipse cx="28" cy="62" rx="5" ry="10" fill="#43a047" opacity=".7" transform="rotate(-15 28 62)"/>
-        <ellipse cx="72" cy="62" rx="5" ry="10" fill="#43a047" opacity=".7" transform="rotate(15 72 62)"/>
-        <!-- 머리 -->
-        <circle cx="50" cy="34" r="18" fill="#e53935"/>
-        <!-- 머리 무늬 (파란 이마) -->
-        <ellipse cx="50" cy="26" rx="10" ry="7" fill="#7b1fa2"/>
-        <!-- 눈 흰자 -->
-        <circle cx="43" cy="33" r="5" fill="white"/>
-        <circle cx="57" cy="33" r="5" fill="white"/>
-        <!-- 눈동자 -->
-        <circle cx="44" cy="33" r="3" fill="#1a1a1a"/>
-        <circle cx="58" cy="33" r="3" fill="#1a1a1a"/>
-        <!-- 눈 반짝임 -->
-        <circle cx="45" cy="32" r="1.2" fill="white"/>
-        <circle cx="59" cy="32" r="1.2" fill="white"/>
-        <!-- 부리 -->
-        <path d="M47 39 Q50 44 53 39 Q50 37 47 39Z" fill="#f9a825"/>
-        <!-- 볼터치 핑크 -->
-        <ellipse cx="39" cy="38" rx="4" ry="3" fill="#ff80ab" opacity=".6"/>
-        <ellipse cx="61" cy="38" rx="4" ry="3" fill="#ff80ab" opacity=".6"/>
-        <!-- 꼬리 -->
-        <path d="M42 82 Q50 97 58 82" fill="#b71c1c" stroke="#7f0000" stroke-width="1"/>
-        <!-- 꼬리 초록 포인트 -->
-        <path d="M47 85 Q50 96 53 85" fill="#43a047" opacity=".8"/>
-        <!-- 발 -->
-        <line x1="44" y1="84" x2="40" y2="92" stroke="#f9a825" stroke-width="2.5" stroke-linecap="round"/>
-        <line x1="56" y1="84" x2="60" y2="92" stroke="#f9a825" stroke-width="2.5" stroke-linecap="round"/>
-      </svg>
-      <div class="bird-name">홍시 🍅</div>
-      <div class="bird-species">뉴기니아 싱잉 패럿 ♀</div>
-      <div class="bird-tags">
-        <span class="bird-tag">빨간이</span>
-        <span class="bird-tag">새침함</span>
-        <span class="bird-tag">간식러버</span>
+    <div class="bird-card-wrap" onclick="this.classList.toggle('flipped')">
+      <div class="bird-card-inner">
+        <!-- 앞면 -->
+        <div class="bird-card hongsi bird-front">
+          <svg class="bird-svg" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="50" cy="58" rx="22" ry="26" fill="#e53935"/>
+            <ellipse cx="50" cy="65" rx="13" ry="17" fill="#ff8a65"/>
+            <ellipse cx="30" cy="58" rx="10" ry="18" fill="#b71c1c" transform="rotate(-15 30 58)"/>
+            <ellipse cx="70" cy="58" rx="10" ry="18" fill="#b71c1c" transform="rotate(15 70 58)"/>
+            <ellipse cx="28" cy="62" rx="5" ry="10" fill="#43a047" opacity=".7" transform="rotate(-15 28 62)"/>
+            <ellipse cx="72" cy="62" rx="5" ry="10" fill="#43a047" opacity=".7" transform="rotate(15 72 62)"/>
+            <circle cx="50" cy="34" r="18" fill="#e53935"/>
+            <ellipse cx="50" cy="26" rx="10" ry="7" fill="#7b1fa2"/>
+            <circle cx="43" cy="33" r="5" fill="white"/><circle cx="57" cy="33" r="5" fill="white"/>
+            <circle cx="44" cy="33" r="3" fill="#1a1a1a"/><circle cx="58" cy="33" r="3" fill="#1a1a1a"/>
+            <circle cx="45" cy="32" r="1.2" fill="white"/><circle cx="59" cy="32" r="1.2" fill="white"/>
+            <path d="M47 39 Q50 44 53 39 Q50 37 47 39Z" fill="#f9a825"/>
+            <ellipse cx="39" cy="38" rx="4" ry="3" fill="#ff80ab" opacity=".6"/>
+            <ellipse cx="61" cy="38" rx="4" ry="3" fill="#ff80ab" opacity=".6"/>
+            <path d="M42 82 Q50 97 58 82" fill="#b71c1c" stroke="#7f0000" stroke-width="1"/>
+            <path d="M47 85 Q50 96 53 85" fill="#43a047" opacity=".8"/>
+            <line x1="44" y1="84" x2="40" y2="92" stroke="#f9a825" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="56" y1="84" x2="60" y2="92" stroke="#f9a825" stroke-width="2.5" stroke-linecap="round"/>
+          </svg>
+          <div class="bird-name">홍시 🍅</div>
+          <div class="bird-species">뉴기니아 싱잉 패럿 ♀</div>
+          <div class="bird-tags">
+            <span class="bird-tag">빨간이</span><span class="bird-tag">새침함</span><span class="bird-tag">간식러버</span>
+          </div>
+          <p class="bird-desc">이름처럼 빨갛고 사랑스러운 암컷이에요. 평소엔 도도하지만 간식 앞에서는 금방 순해져요 🎵</p>
+        </div>
+        <!-- 뒷면 -->
+        <div class="bird-card hongsi bird-back">
+          <div style="font-size:48px;margin-bottom:10px">📸</div>
+          <div class="bird-name" style="margin-bottom:8px">홍시 실제 사진</div>
+          <div style="background:rgba(255,255,255,.5);border-radius:14px;padding:16px;font-size:13px;color:#c2185b;font-weight:600">
+            ❤️ 뉴기니아 싱잉 패럿<br><br>
+            빨간 깃털과<br>보라빛 이마가 특징인<br>우리 홍시예요 🍅<br><br>
+            <span style="font-size:12px;color:var(--sub)">사진을 추가하려면<br>이미지를 직접 넣어주세요</span>
+          </div>
+        </div>
       </div>
-      <p class="bird-desc">이름처럼 빨갛고 사랑스러운 암컷이에요. 평소엔 도도하지만 간식 앞에서는 금방 순해져요. 기분이 좋으면 혼자 노래를 흥얼거리는 귀여운 습관이 있어요 🎵</p>
     </div>
   </div>
 
@@ -396,7 +394,7 @@ footer{text-align:center;color:var(--sub);font-size:13px;margin-top:28px;padding
 </section>
 
 <!-- ── 게임 배너 ── -->
-<a class="game-banner" href="pacman/">
+<a class="game-banner" href="pacman/" id="game-banner">
   <div class="game-banner-inner">
     <div>
       <h3>🎮 미니게임 플레이하기</h3>
